@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>RateSpot | Today Market Prices</title>
+<meta name="description" content="Check today's government market prices of Mentha Oil, Petrol, Diesel, Gold and Silver. Fast and free Sarkari Rate updates.">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+
+ <!-- Gharph Js -->
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+ 
+ <!-- PRELOADER -->
+<div id="preloader">
+<div class="loader">
+<img src="favicon.png" alt="logo">
+</div>
+<h3>Welcome Back!</h3>
+</div>
+
+  <!-- Respansive Nav for Desktop (Right Side) -->
+  <header>
+  <div class="logo">
+    <h3>Rate Spot</h3>
+  </div>
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#">Contact</a>
+    <a href="#">Others</a>
+  </nav>
+    
+  <div class="menu-icon" onclick="openSidebar()">
+    <span>☰</span>
+  </div>
+</header>
+
+<!-- Sidebar for Mobile (Right Side) --> 
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">&times;</span>
+   <a href="#">Home</a>
+  <a href="about-terms.html">About us</a>
+  <a href="mailto:help@ratespot.net">Contact us</a>
+  <a href="https://www.google.com/search?q=sarkari+Rates&sca_esv=cd63d47fa156149d&udm=50&fbs=AIIjpHzkVKqxs4K0fKwoDSUgo5iVwltk49sNU9rmnb7cwy9D9u2ABp4cGhxggR31ZU4sYMBKjjHc8TKxmC09hlyW2a_-gNhfD74LBFGymqfdfShmmvohfPeAIPDRJNi10daQHs4MZgoBsFv0gk2AQOkd6NdiZ-Ca--5VYi8DYYN8T6yZf5kFDUotu4vBcv2NQ6fh56QkQQuk4hApUaP3e3bRXFJehsCv5ncsVLhUz0Jejc5Xj0PU0xY&aep=1&ntc=1&sa=X&ved=2ahUKEwjyy4uRyb-OAxXIzDgGHUWsGf8Q2J8OegQIDBAE&biw=392&bih=739&dpr=2.75&mstk=AUtExfASq3pUvAp2z5Qk_CHdei9kEVK9MLLL-L6hYAHCYgA5QEPTeTdMzFIf_otkWkHRMxVDth7Bq_5WNtBapOAB0Fi5nO_oW00RyCZz23EY9PyOazKr5-LZnX53-R99oceNp1-tE6ZCuZKBnLmQYUvqKSoUsgWW-Sdr1-U&csuir=1">Explore more</a>  
+ <a href="app/app.aspx.html" style="color:yellow">Download Apps</a>
+ <br>
+ <img src="img/footer.jpg" height="auto" width="200px">
+</div>
+ 
+ <br><br><br>
+ <!-- Ads Carousel -->
+  <section class="ads-section">
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="slider/05.jpg" height="auto" width="100%"></div>
+        <div class="slide"><img src="slider/01.jpg" height="auto" width="100%"></div>
+        <div class="slide"><img src="slider/02.jpg" height="auto" width="100%"></div>
+        <div class="slide"><img src="slider/03.jpg" height="auto" width="100%"></div>
+        <div class="slide"><img src="slider/04.jpg" height="auto" width="100%"></div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Button Grid -->  
+  <div class="top">──── Today Live Market ────</div>
+
+   <!-- Main Content -->
+ 
+  <div class="card-grid">     
+      <!-- Regular cards -->
+      <div class="card card reveal">
+        <div class="card-header">Diesel</div>
+        <div class="card-body">₹ 87.81/Lt-</div>
+      </div>
+       
+      <div class="card card reveal">
+        <div class="card-header">Petrol</div>
+        <div class="card-body">₹ 94.57/Lt-</div>
+      </div>
+      <div class="card card reveal">
+        <div class="card-header">CNG</div>
+        <div class="card-body">₹ 92.75/kg</div>
+      </div>
+      <div class="card card reveal">
+        <div class="card-header">LPG</div>
+        <div class="card-body">₹ 950/ 14.2kg</div>
+      </div>
+      <div class="card card reveal">
+        <div class="card-header">Gold</div>
+        <div class="card-body">₹ 16,150/gm</div>
+      </div>
+      <div class="card card reveal">
+        <div class="card-header">Silver</div>
+        <div class="card-body">₹ 2,95,000/kg</div>
+      </div>
+     
+       <!-- Single-width cards -->
+      <div class="card single-width card reveal">
+        <div class="card-header">Mentha Oil</div>
+        <div class="card-body">₹ 940/kg</div>
+      </div>
+    </div>
+  </div>
+
+<!-- Graph -->
+
+<div class="reveal">
+<div class="chart-box card">
+<canvas id="rateChart"></canvas>
+</div>
+  </div>
+
+    <!-- MAPS SECTION -->
+<div class="reveal">
+  <a href="maps.aspx.html"><div class="connect card" style="border:1px solid black">  
+   <img src="img/maps.jpg" height="auto" width="100%">
+    </div></a>
+      </div>
+<br>
+   
+    <!-- CONTACT SECTION -->
+<div class="reveal">
+  <div class="connect card">  
+    <div class="heading-card">─── Connect with Us ───</div>
+
+    <!-- Social Buttons -->
+    <div class="social-buttons">
+      <a class="telegram" href="https://t.me/ratespot/" target="_blank">
+        <i class="fab fa-telegram"></i> Join Telegram
+      </a>
+      <a class="whatsapp" href="https://whatsapp.com/channel/ratespot/" target="_blank">
+        <i class="fab fa-whatsapp"></i> Join WhatsApp
+      </a>
+    </div>
+ 
+    <!-- Newsletter -->
+   <form onsubmit="subscribe(event)">
+      <div class="newsletter">
+      <input type="email" id="email" placeholder="Subscribe Newsletter" required>
+      <button type="submit">➜</button>
+    </div>
+     </form>
+    <br>
+  </div>
+</div>
+
+    <br>
+
+<div class="reveal">
+    <div class="contact card">
+    <div class="heading-card">─── Contact with Us ───</div>
+   <form action="https://api.web3forms.com/submit" method="post">
+      <div class="form-row">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Mobile No." required>
+        <input type="text" placeholder="Subject" required>
+      </div>
+      <textarea placeholder="Message..." required></textarea>
+      <div class="form-actions">
+        <button type="reset" class="clear">Clear ✕</button>
+        <button type="submit" class="submit">Submit ➜</button>        
+      </div>
+      <br>
+    </form>
+  </div>
+</div>
+  <br>
+
+<!-- Marquee icons -->
+
+<div class="marquee reveal">
+  <div class="marquee-track">
+    <a href="https://www.digitalindia.gov.in/" target="_blank">
+      <img src="icon/02.svg" alt="Digital India">
+    </a>
+    <a href="https://nkn.gov.in/en/" target="_blank">
+      <img src="icon/03.svg" alt="NKN">
+    </a>
+    <a href="https://www.mygov.in/" target="_blank">
+      <img src="icon/04.svg" alt="MyGov">
+    </a>
+    <a href="https://email.gov.in/" target="_blank">
+      <img src="icon/05.svg" alt="Email Gov">
+    </a>
+    <a href="https://serviceonline.gov.in/" target="_blank">
+      <img src="icon/01.svg" alt="Service Online">
+    </a>
+    <a href="https://jeevanpramaan.gov.in/" target="_blank">
+      <img src="icon/06.svg" alt="Jeevan Pramaan">
+    </a>
+    <a href="https://www.meity.gov.in/" target="_blank">
+      <img src="icon/08.svg" alt="MeitY">
+    </a>
+    <a href="https://www.india.gov.in/" target="_blank">
+      <img src="icon/09.svg" alt="India Gov">
+    </a>
+    <a href="https://parichay.nic.in/" target="_blank">
+      <img src="icon/07.svg" alt="Parichay">
+    </a>
+
+    <!-- Duplicate for smooth infinite effect -->
+    <a href="https://www.digitalindia.gov.in/" target="_blank">
+      <img src="icon/02.svg" alt="Digital India">
+    </a>
+    <a href="https://nkn.gov.in/en/" target="_blank">
+      <img src="icon/03.svg" alt="NKN">
+    </a>
+  </div>
+</div> 
+
+<!-- Footer -->
+  <footer class="custom-footer reveal">
+   <div class="footer-logo">
+    <a href="http://adtech2021.netlify.app"><img src="img/adtech.png" height="auto" width="250px"></a>
+   </div>
+
+  <nav class="footer-nav">
+    <a href="#">Home</a> |
+    <a href="about-terms.html">About</a> |
+    <a href="about-terms.html#terms">Terms & Policy</a> |
+    <a href="about-terms.html#faq">FAQs</a>
+  </nav>
+
+  <p class="copyright">
+   <span id="dateTime"></span> | IP Address : 
+   <span id="ipAddress" class="ip">faching...</span>
+   <br> © Developed by AD Tech Inc. Lucknow
+  </p></p>
+</footer>
+  <script src="js/preloader.js"></script>    
+  <script src="js/footer-time.js"></script>    
+  <script src="js/a-button.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/ripple.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/subscribe.js"></script>
+  <script src="js/graph.js"></script>
+  </body>
+</html>

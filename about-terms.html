@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Rate</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #d10000;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    section h3 {
+      margin-top: 25px;
+      color: #111;
+    }
+
+    section p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      section {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Respansive for Desktop (Right Side) -->
+  <header>
+  <div class="logo">
+    <h3>Rate Spot</h3>
+  </div>
+  <nav class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#">Contact</a>
+    <a href="#">Others</a>
+  </nav>
+    
+  <div class="menu-icon" onclick="openSidebar()">
+    <span>☰</span>
+  </div>
+</header>
+
+<!-- Sidebar for Mobile (Right Side) --> 
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="closeSidebar()">&times;</span>
+   <a href="#">Home</a>
+  <a href="#about">About us</a>
+  <a href="#terms">Terms & Policy</a>
+  <a href="#faq">FAQs</a>            
+</div>
+
+  <br><br>
+  <section id="about">
+    <h2>About Us :</h2>
+    <p><strong>Rate Spot</strong> is your trusted platform for daily price updates of essential commodities as published by the government.</p>
+    <p>Our goal is to help farmers, consumers, and traders stay informed with accurate, timely data on government-declared mandi and market rates.</p>
+    <p><strong>Why Choose Us?</strong> We provide real-time updates, notifications via Telegram/WhatsApp, and an easy-to-use platform for all users.</p>
+    <p><strong>Contact Email:</strong> info@ratespot.net</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms & Privacy Policy :</h2>
+
+    <h3>1. Data Usage</h3>
+    <p>We do not collect any personal information without your consent. Basic analytics may be used to improve your experience.</p>
+
+    <h3>2. Accuracy of Content</h3>
+    <p>We source all rate data from official government portals. Sarkari Rates is not responsible for any delay or discrepancy.</p>
+
+    <h3>3. External Links</h3>
+    <p>Our website contains links to official websites, Telegram, and WhatsApp. We are not liable for their content or policies.</p>
+
+    <h3>4. Updates</h3>
+    <p>We may occasionally update this policy. Continued use of the site means you accept the changes.</p>
+
+    <p><strong>Support:</strong> support@ratespot.net</p>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions (FAQs) :</h2>
+
+    <h3>Q1: What is Top Rate?</h3>
+    <p>It’s a platform that shows daily government-issued prices of essential commodities like grains, vegetables, and fruits.</p>
+
+    <h3>Q2: Is this data verified?</h3>
+    <p>Yes, all prices are taken directly from trusted government sources and mandis.</p>
+
+    <h3>Q3: How can I receive updates?</h3>
+    <p>Join our Telegram and WhatsApp groups to get instant notifications of daily rates.</p>
+
+    <h3>Q4: How to contact the team?</h3>
+    <p>Simply use the contact form on our homepage or email us at help@ratespot.net</p>
+  </section>
+
+  <footer>
+    &copy; 2026 Rate Spot. All Rights Reserved.
+  </footer>
+<script src="js/sidebar.js"></script>
+</body>
+</html>
