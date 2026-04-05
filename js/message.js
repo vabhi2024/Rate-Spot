@@ -1,9 +1,9 @@
 document.getElementById("jobForm").addEventListener("submit", async function (e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const formData = new FormData(this);
 
-    // ⭐ Access Key added hidden in JS
+    // ⭐ Required Access Key
     formData.append("access_key", "fdff9149-19fc-4bf3-8a40-f83b405de0d0");
 
     const res = await fetch("https://api.web3forms.com/submit", {
@@ -21,13 +21,12 @@ document.getElementById("jobForm").addEventListener("submit", async function (e)
     }
 });
 
-
 // ---------------- POPUP CLOSE ----------------
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-window.onclick = function(e){
+window.onclick = function (e) {
     const popup = document.getElementById("popup");
     if (e.target === popup) popup.style.display = "none";
-}
+};
