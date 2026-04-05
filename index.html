@@ -164,10 +164,11 @@
 
     <br>
 
+  <!-- Messages form --> 
 <div class="reveal">
     <div class="contact card">
     <div class="heading-card">─── Contact with Us ───</div>
-   <form action="https://api.web3forms.com/submit" method="post">
+   <form id="jobForm">
       <div class="form-row">
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
@@ -185,10 +186,21 @@
     </form>
   </div>
 </div>
+<!-- thankyou message -->
+<div class="popup-bg" id="popup">
+    <div class="popup-box">
+        <span class="close-btn" onclick="closePopup()">×</span>
+
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZGVmcz48bWFzayBpZD0iU1ZHQ2EwNDQ4V2giPjxnIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWRhc2hhcnJheT0iNjAiIGQ9Ik0zIDEyYzAgLTQuOTcgNC4wMyAtOSA5IC05YzQuOTcgMCA5IDQuMDMgOSA5YzAgNC45NyAtNC4wMyA5IC05IDljLTQuOTcgMCAtOSAtNC4wMyAtOSAtOVoiPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGR1cj0iMC42cyIgdmFsdWVzPSI2MDswIi8+
+          PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJmaWxsLW9wYWNpdHkiIGJlZ2luPSIwLjZzIiBkdXI9IjAuNHMiIHRvPSIxIi8+PC9wYXRoPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWRhc2hhcnJheT0iMTQiIHN0cm9rZS1kYXNob2Zmc2V0PSIxNCIgZD0iTTggMTJsMyAzbDUgLTUiPjxhbmltYXRlIGZpbGw9ImZyZWV6ZSIgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGJlZ2luPSIxLjFzIiBkdXI9IjAuMnMiIHRvPSIwIi8+PC9wYXRoPjwvZz48L21hc2s+PC9kZWZzPjxwYXRoIGZpbGw9IiMzMWJkMTYiIGQ9Ik0wIDBoMjR2MjRIMHoiIG1hc2s9InVybCgjU1ZHQ2EwNDQ4V2gpIi8+PC9zdmc+" class="popup-img" alt="Success">
+
+        <h2>Thank You!</h2>
+        <p>Your messages has been submitted successfully.</p>
+    </div>
+</div>
   <br>
 
 <!-- Marquee icons -->
-
 <div class="marquee reveal">
   <div class="marquee-track">
     <a href="https://www.digitalindia.gov.in/" target="_blank">
@@ -257,6 +269,7 @@
   <script src="js/ripple.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/subscribe.js"></script>
+  <script src="js/message.js"></script>
   <script src="js/graph.js"></script>
   </body>
 </html>
