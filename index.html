@@ -169,21 +169,23 @@
     <div class="contact card">
     <div class="heading-card">─── Contact with Us ───</div>
    <form id="jobForm">
-      <div class="form-row">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-      </div>
-      <div class="form-row">
-        <input type="tel" placeholder="Mobile No." required>
-        <input type="text" placeholder="Subject" required>
-      </div>
-      <textarea placeholder="Message..." required></textarea>
-      <div class="form-actions">
-        <button type="reset" class="clear">Clear ✕</button>
-        <button type="submit" class="submit">Submit ➜</button>        
-      </div>
-      <br>
-    </form>
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="form-row">
+    <input type="tel" name="phone" placeholder="Mobile No." required>
+    <input type="text" name="subject" placeholder="Subject" required>
+  </div>
+
+  <textarea name="message" placeholder="Message..." required></textarea>
+
+  <div class="form-actions">
+    <button type="reset" class="clear">Clear ✕</button>
+    <button type="submit" class="submit">Submit ➜</button>
+  </div>
+</form>
   </div>
 </div>
 <!-- thankyou message -->
